@@ -1,4 +1,4 @@
-# static
+# thingly.net
 static site content (generated with Hugo)
 
 ## Theme
