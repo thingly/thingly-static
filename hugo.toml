@@ -1,0 +1,4 @@
+baseURL = 'https://thingly.net/'
+languageCode = 'en-us'
+title = 'thingly.net'
+theme = 'ananke'
