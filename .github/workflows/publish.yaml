@@ -32,7 +32,7 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: ghcr.io/thingly/static
-          tags: v1
+          tags: v2
       
       # QEMU and buildx for multi-arch support
       - name: Set up QEMU
