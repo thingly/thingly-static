@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: thingly-static
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: thingly-static
+  template:
+    metadata:
+      labels:
+        app: thingly-static
+    spec:
+      containers:
+      - name: thingly-static
+        image: ghcr.io/thingly/static:v1
+        ports:
+        - containerPort: 8080

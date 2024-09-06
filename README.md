@@ -17,3 +17,6 @@ There is a Makefile with the following targets:
 ```
 
 Note that resume comes from a separate private repo and isn't part of the regular build (which is why it's checked in alongside the rest of the static content). To refresh it you'll need to do `make resume` separately.
+
+## Deploying
+`kubectl apply -n www -f deployment.yaml`

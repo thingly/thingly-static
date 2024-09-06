@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - main
+    paths-ignore: [ "deployment.yaml", "README.md", "TODO.md" ]
 permissions:
   packages: write
   contents: read
