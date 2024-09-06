@@ -1,5 +1,7 @@
-# generate content
+# generated content
 /public
 /resources/_gen
+/static/resume.html
+/static/css/resume.css
 
 .hugo_build.lock
