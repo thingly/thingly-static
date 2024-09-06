@@ -1,6 +1,7 @@
 baseURL = 'https://thingly.net/'
 languageCode = 'en-us'
 title = 'thingly.net'
+theme = ["PaperMod"]
 
 [menu]
 
@@ -13,7 +14,3 @@ weight = 1
 name = "Résumé"
 url = "/resume/"
 weight = 2
-
-[module]
-[[module.imports]]
-path = "github.com/nanxiaobei/hugo-paper"

@@ -1,17 +1,14 @@
 default: help
 
-public:  content/resume.html  ## build the static content
+public:  ## build the static content
 	hugo
 
 serve: public  ## run a development server
 	hugo serve -D
 .PHONY: serve
 
-resume: content/resume.html ## build public-facing resume
-
-# NB depends on resume being checked out at a certain location
-content/resume.html: ../../resume/resume-public.html
-	make -C ../../resume resume-public.html && cp $< $@
+resume: content/resume.md  ## build public-facing resume
+	make -C ~/src/resume publish
 
 help: ## show this help
 	@echo "\nSpecify a command. The choices are:\n"

@@ -1,0 +1,7 @@
+.cv-role, .cv-date-range {
+    display: inline;
+}
+
+.cv-date-range {
+    font-style: italic;
+}

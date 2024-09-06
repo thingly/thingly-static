@@ -1,6 +1,6 @@
 +++
 title = 'First Post'
-date = 2024-06-24T22:24:43-04:00
+date = 2024-09-06T10:24:13-04:00
 draft = false
 +++
-This is the first post.
+This is the first post. More to come! :-)
