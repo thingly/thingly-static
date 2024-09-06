@@ -12,6 +12,7 @@ There is a Makefile with the following targets:
   public       build the static content
   serve        run a development server
   resume       build public-facing resume
+  clean        remove all generated files
   help         show this help
 ```
 
