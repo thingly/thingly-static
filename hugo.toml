@@ -3,20 +3,16 @@ languageCode = 'en-us'
 title = 'thingly.net'
 
 [menu]
-[[menu.main]]
-name = "Home"
-url = "/"
-weight = 1
 
 [[menu.main]]
 name = "Blog"
 url = "/posts/"
-weight = 2
+weight = 1
 
 [[menu.main]]
-name = "Resume"
-url = "/resume.html"
-weight = 3
+name = "Résumé"
+url = "/resume/"
+weight = 2
 
 [module]
 [[module.imports]]
