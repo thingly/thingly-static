@@ -3,6 +3,18 @@ languageCode = 'en-us'
 title = 'thingly.net'
 theme = ["PaperMod"]
 
+# variable reference for PaperMod: https://github.com/adityatelange/hugo-PaperMod/wiki/Variables
+[params]
+description = 'a collection of wonderful things'
+author = 'Cliff Snyder'
+keywords = ['thingly', 'profile', 'blog']
+ShowReadingTime = true
+ShowShareButtons = true
+ShowPostNavLinks = true
+ShowBreadCrumbs = true
+ShowWordCount = true
+ShowRssButtonInSectionTermList = true
+
 [menu]
 
 [[menu.main]]
