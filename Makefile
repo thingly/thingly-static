@@ -1,8 +1,12 @@
 default: help
 
-public:  ## build the static content
+build:  ## build the static content
 	hugo
 .PHONY: public
+
+deploy:  ## publish a new version to thingly.net
+	kubectl apply -f deployment.yaml -n www
+.PHONY: publish
 
 serve: public  ## run a development server
 	hugo serve -D
