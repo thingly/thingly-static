@@ -2,6 +2,7 @@ default: help
 
 public:  ## build the static content
 	hugo
+.PHONY: public
 
 serve: public  ## run a development server
 	hugo serve -D
