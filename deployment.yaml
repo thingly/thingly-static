@@ -14,6 +14,7 @@ spec:
     spec:
       containers:
       - name: thingly-static
-        image: ghcr.io/thingly/static:v7
+        image: ghcr.io/thingly/static
+        imagePullPolicy: "Always"
         ports:
         - containerPort: 80
