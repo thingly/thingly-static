@@ -11,10 +11,15 @@ People and Process that are hard.
 
 ## Experience { #experience .content-section }
 
+### Multi Media, LLC { #mmllc .employer }
+
+#### Senior Site Reliability Engineer { .cv-role }
+##### January 2025 to Present { .cv-date-range }
+
 ### LinkedIn { #linkedin .employer }
 
 #### Staff Site Reliability Engineer { .cv-role }
-##### March 2016 to Present { .cv-date-range }
+##### March 2016 to August 2024 { .cv-date-range }
 
 * _Day-to-Day:_ Supported LinkedIn's Messaging, Growth, and Flagship ecosystems as an embedded SRE as it scaled
 to over 1 billion members.
