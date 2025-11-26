@@ -2,7 +2,6 @@
 title = 'Planting Trees'
 date = 2025-11-25T23:58:55-05:00
 keywords = ["blog", "musing", "writing"]
-draft = true
 +++
 
 Lately I've been poking through some things I've written over the years, and
