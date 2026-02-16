@@ -14,6 +14,7 @@ ShowPostNavLinks = true
 ShowBreadCrumbs = true
 ShowWordCount = true
 ShowRssButtonInSectionTermList = true
+mainSections = ["posts"]
 
 [menu]
 
@@ -23,6 +24,12 @@ url = "/posts/"
 weight = 1
 
 [[menu.main]]
+name = "igotw"
+title = "inGraph of the Week - Archive"
+url = "/igotw/"
+weight = 2
+
+[[menu.main]]
 name = "Résumé"
 url = "/resume/"
-weight = 2
+weight = 3

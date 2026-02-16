@@ -1,0 +1,102 @@
+{{- define "main" }}
+
+{{- if .Title }}
+<header class="page-header">
+  {{- partial "breadcrumbs.html" . }}
+  <h1>
+    {{ .Title }}
+    {{- if and (eq .Kind "section") (.Param "ShowRssButtonInSectionTermList") }}
+    {{- with .OutputFormats.Get "rss" }}
+    <a href="{{ .RelPermalink }}" title="RSS" aria-label="RSS">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" height="23">
+        <path d="M4 11a9 9 0 0 1 9 9" />
+        <path d="M4 4a16 16 0 0 1 16 16" />
+        <circle cx="5" cy="19" r="1" />
+      </svg>
+    </a>
+    {{- end }}
+    {{- end }}
+  </h1>
+</header>
+{{- end }}
+
+{{- if .Content }}
+<div class="post-content">
+  {{ .Content }}
+</div>
+{{- end }}
+
+<div class="post-content" style="margin-top: 1.5em;">
+  <input
+    type="text"
+    id="igotw-search"
+    placeholder="Filter posts by title or date..."
+    autofocus
+    style="width: 100%; padding: 0.5em; font-size: 1em; border: 1px solid var(--border); border-radius: 4px; background: var(--entry); color: var(--primary);"
+  />
+
+  <p id="igotw-count" style="color: var(--secondary); font-size: 0.9em; margin-top: 0.5em;"></p>
+
+  <div id="igotw-list">
+    {{- $pages := .Pages.ByDate.Reverse }}
+    {{- $years := slice }}
+    {{- range $pages }}
+      {{- $y := .Date.Format "2006" }}
+      {{- if not (in $years $y) }}
+        {{- $years = $years | append $y }}
+      {{- end }}
+    {{- end }}
+
+    {{- range $year := $years }}
+    <div class="igotw-year" data-year="{{ $year }}">
+      <h2 style="margin-top: 1.5em; margin-bottom: 0.5em;">{{ $year }}</h2>
+      <ul style="list-style: none; padding-left: 0;">
+        {{- range $pages }}
+          {{- if eq (.Date.Format "2006") $year }}
+          <li class="igotw-post" data-title="{{ lower .Title }}" data-date="{{ .Date.Format "2006-01-02" }}" style="padding: 0.3em 0;">
+            <span style="color: var(--secondary); font-size: 0.9em; margin-right: 0.5em;">{{ .Date.Format "Jan 02" }}</span>
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+          </li>
+          {{- end }}
+        {{- end }}
+      </ul>
+    </div>
+    {{- end }}
+  </div>
+</div>
+
+<script>
+(function() {
+  var input = document.getElementById('igotw-search');
+  var posts = document.querySelectorAll('.igotw-post');
+  var years = document.querySelectorAll('.igotw-year');
+  var countEl = document.getElementById('igotw-count');
+  var total = posts.length;
+
+  countEl.textContent = total + ' posts';
+
+  input.addEventListener('input', function() {
+    var q = this.value.toLowerCase().trim();
+    var visible = 0;
+
+    posts.forEach(function(li) {
+      var match = !q ||
+        li.dataset.title.indexOf(q) !== -1 ||
+        li.dataset.date.indexOf(q) !== -1;
+      li.style.display = match ? '' : 'none';
+      if (match) visible++;
+    });
+
+    years.forEach(function(div) {
+      var hasVisible = div.querySelector('.igotw-post:not([style*="display: none"])');
+      div.style.display = hasVisible ? '' : 'none';
+    });
+
+    countEl.textContent = q
+      ? visible + ' of ' + total + ' posts'
+      : total + ' posts';
+  });
+})();
+</script>
+{{- end }}{{- /* end main */ -}}
