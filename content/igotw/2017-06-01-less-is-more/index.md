@@ -1,7 +1,7 @@
 +++
 title = "Less is More"
 date = "2017-06-01"
-slug = "less-is-more"
+slug = "less-is-more-2"
 draft = false
 +++
 
