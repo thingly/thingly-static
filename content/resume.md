@@ -18,14 +18,12 @@ People and Process that are hard.
 
 ##### January 2026 to Present { .cv-date-range }
 
-* _Day-to-Day:_ Supported a monolithic Django app and several ancilary services,
-including all of the GCP infrastructure running it.
+* _Day-to-Day:_ Supported a monolithic Django app and several ancilary services, including all of the supporting infrastructure (GCP/GKE).
+* Led a project to migrate production infrastructure for all external- and internal-facing workloads onto Kubernetes.
 
 #### Senior Site Reliability Engineer { .cv-role }
 
 ##### January 2025 to Present { .cv-date-range }
-
-* Led a project to migrate production infrastructure for all external- and internal-facing workloads onto Kubernetes (GKE).
 
 ### LinkedIn { #linkedin .employer }
 
