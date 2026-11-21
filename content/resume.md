@@ -95,14 +95,8 @@ queue managers.
 bibliographic database), web transaction logs, and other large datasets.
 * Implemented a prototype for an interactive visual application for comparing global library data.
 
-#### Technical Intern, Systems Support { .cv-role }
-
-##### July 2003 to March 2004 { .cv-date-range }
-
 ## Education { #education .content-section }
 
 ### B.S. Computer Science { .degree }
 
 #### The Ohio State University { .cv-school }
-
-##### 1999 to 2003 { .cv-date-range }
