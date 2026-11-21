@@ -23,7 +23,7 @@ People and Process that are hard.
 
 #### Senior Site Reliability Engineer { .cv-role }
 
-##### January 2025 to Present { .cv-date-range }
+##### January 2025 to December 2025 { .cv-date-range }
 
 ### LinkedIn { #linkedin .employer }
 
